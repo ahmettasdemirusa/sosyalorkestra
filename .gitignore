@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+
+# Hassas Bilgiler
+.env
+
+# Veritabanı Dosyası
+*.db
+
+# Kullanıcı tarafından yüklenen medya dosyaları
+uploads/

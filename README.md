@@ -11,6 +11,7 @@ Facebook · Instagram · LinkedIn · Pinterest · Google My Business · X (Twitt
 ![Flask](https://img.shields.io/badge/Flask-Backend-000000?logo=flask&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-Veritabanı-003B57?logo=sqlite&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/OpenAI-Yapay%20Zeka-412991?logo=openai&logoColor=white)
+![Lisans](https://img.shields.io/badge/lisans-MIT-green)
 ![Durum](https://img.shields.io/badge/durum-geliştirme%20aşamasında-orange)
 
 </div>
@@ -276,6 +277,10 @@ sosyalorkestra/
 - İki aşamalı doğrulama (Google Authenticator vb.) **Ayarlar** sayfasından açılabilir.
 - `FLASK_SECRET_KEY` tanımlanmazsa güvensiz bir varsayılan kullanılır — canlı ortamda mutlaka ayarlayın.
 - `backend.py` geliştirme modunda (`debug=True`) çalışır; canlı ortamda `gunicorn` gibi bir WSGI sunucusu kullanın.
+
+## 📄 Lisans
+
+Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır. Kodu özgürce kullanabilir, değiştirebilir ve dağıtabilirsiniz; tek şart lisans ve telif bildiriminin korunmasıdır.
 
 ---
 

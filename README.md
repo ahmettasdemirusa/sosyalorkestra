@@ -2,138 +2,125 @@
 
 # 🎻 Sosyal Orkestra
 
-**Tüm sosyal medya hesaplarınızı tek bir panelden yönetin, planlayın ve raporlayın.**
+**A self-hosted social media management tool: plan, schedule, auto-publish and report on every account from one dashboard.**
 
-Facebook · Instagram · LinkedIn · Pinterest · Google My Business · X (Twitter)
+Facebook · Instagram · LinkedIn · Pinterest · Google Business Profile · X (Twitter)
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-Arayüz-FF4B4B?logo=streamlit&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-Backend-000000?logo=flask&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-Veritabanı-003B57?logo=sqlite&logoColor=white)
-![OpenAI](https://img.shields.io/badge/OpenAI-Yapay%20Zeka-412991?logo=openai&logoColor=white)
-![Lisans](https://img.shields.io/badge/lisans-MIT-green)
-![Durum](https://img.shields.io/badge/durum-geliştirme%20aşamasında-orange)
+![Streamlit](https://img.shields.io/badge/Streamlit-UI-FF4B4B?logo=streamlit&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-backend-000000?logo=flask&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-database-003B57?logo=sqlite&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-AI_captions-412991?logo=openai&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-in%20development-orange)
+
+*Türkçe okumak için: [README.tr.md](README.tr.md)*
 
 </div>
 
 ---
 
-## 📖 Nedir?
+## 📖 What is it?
 
-**Sosyal Orkestra**, ajansların ve işletmelerin birden fazla markayı ve sosyal medya hesabını tek bir yerden yönetmesi için geliştirilmiş bir sosyal medya yönetim panelidir. Hesaplar resmî API'ler ve OAuth ile bağlanır; gönderiler takvime yerleştirilir, zamanı geldiğinde zamanlayıcı tarafından otomatik olarak yayınlanır.
+**Sosyal Orkestra** ("social orchestra") is an open-source alternative to hosted social media schedulers, for agencies and businesses that run several brands. Accounts connect through each platform's **official API and OAuth**. Posts go onto a calendar, and a scheduler publishes them automatically when they are due. Everything runs on your own machine or server.
 
-## ✨ Özellikler
+> **Interface language:** the dashboard is currently in Turkish. Translation contributions are very welcome.
 
-| | Özellik | Açıklama |
+## ✨ Features
+
+| | Feature | What it does |
 |---|---|---|
-| 🗓️ | **İçerik Takvimi** | Gönderileri takvim üzerinde planlayın; zamanı gelen gönderiler her dakika kontrol edilip otomatik yayınlanır. |
-| 🏷️ | **Çoklu Marka** | Bir takım altında birden fazla marka; her markanın kendi hesapları, gönderileri ve içerikleri. |
-| 👥 | **Takım ve Yetkiler** | Üye bazında `paylaşım`, `onaylama`, `rapor görme` ve `takım yönetimi` izinleri. |
-| ✅ | **Onay Akışı** | Editörlerin hazırladığı gönderiler, yetkili bir kişi onaylamadan yayınlanmaz. |
-| 🤖 | **Yapay Zekâ Destekli İçerik** | OpenAI ile gönderi metni ve içerik fikri üretimi, görseller için otomatik alt metin (erişilebilirlik). |
-| 📥 | **Birleşik Gelen Kutusu** | Yorumları platformlardan senkronize edin, panelden yanıtlayın ve beğenin. |
-| 📊 | **Analiz ve PDF Rapor** | Platform ve zamana göre gönderi grafikleri, en iyi paylaşım saati analizi, tek tıkla PDF rapor. |
-| 🔭 | **Rakip Analizi** | Rakip hesapların takipçi değişimini zaman içinde izleyin. |
-| 💡 | **Trendler** | Google Trends üzerinden Türkiye gündemindeki aramalar. |
-| 🖼️ | **Görsel Araçları** | Unsplash'ten görsel arama, yüklenen görseli kırpma. |
-| 📤 | **Toplu Yükleme** | CSV şablonu ile onlarca gönderiyi tek seferde planlayın. |
-| #️⃣ | **Şablonlar ve Hashtag Grupları** | Sık kullanılan metinleri ve hashtag setlerini kaydedip tekrar kullanın. |
-| 🪣 | **İçerik Kovaları** | Gönderileri kategorilere (ör. Tanıtım, Kampanya) ayırın. |
-| 🔔 | **Bildirimler** | Yayınlanan veya hata veren her gönderi için panel içi bildirim. |
-| 🔐 | **Güvenlik** | Şifreler hash'lenerek saklanır, iki aşamalı doğrulama (TOTP / 2FA), token'lar için Fernet şifreleme. |
+| 🗓️ | **Content calendar** | Plan posts on a calendar. Due posts are checked every minute and published automatically. |
+| 🏷️ | **Multiple brands** | Several brands under one team, each with its own accounts, posts and content. |
+| 👥 | **Teams & permissions** | Per-member permissions: `post`, `approve`, `view reports`, `manage team`. |
+| ✅ | **Approval workflow** | Posts drafted by editors are not published until someone with approval rights signs off. |
+| 🤖 | **AI-assisted content** | Captions and content ideas with OpenAI, plus automatic image alt text for accessibility. |
+| 📥 | **Unified inbox** | Sync comments from the platforms, then reply to and like them from the dashboard. |
+| 📊 | **Analytics & PDF reports** | Charts by platform and over time, a best-time-to-post analysis, and one-click PDF reports. |
+| 🔭 | **Competitor tracking** | Track competitor accounts' follower counts over time. |
+| 💡 | **Trends** | Trending searches from Google Trends. |
+| 🖼️ | **Image tools** | Search Unsplash images and crop uploads. |
+| 📤 | **Bulk upload** | Schedule dozens of posts at once from a CSV template. |
+| #️⃣ | **Templates & hashtag groups** | Save and reuse captions and hashtag sets. |
+| 🪣 | **Content buckets** | Group posts into categories such as Promotion or Campaign. |
+| 🔔 | **Notifications** | An in-app notification for every post that is published or fails. |
+| 🔐 | **Security** | Hashed passwords, two-factor authentication (TOTP), Fernet encryption for tokens. |
 
-## 🌐 Platform Desteği
+## 🌐 Platform support
 
-| Platform | Hesap Bağlama | Otomatik Yayın | Not |
+| Platform | Connect account | Auto-publish | Notes |
 |---|:---:|:---:|---|
-| **Facebook** (Sayfa) | ✅ | ✅ | Görsel gönderi. Video yayını henüz yok. |
-| **Instagram** (Business) | ✅ | ✅ | Görsel ve video (Reels). |
-| **LinkedIn** | ✅ | ✅ | Şu an yalnızca metin gönderisi. |
-| **Pinterest** | ✅ | ✅ | Seçilen panoya Pin. |
-| **Google My Business** | ✅ | ✅ | İşletme konumuna gönderi. |
-| **X (Twitter)** | ✅ | ⏳ | Bağlantı ve gelen kutusu hazır; zamanlayıcıdan yayın henüz eklenmedi. |
+| **Facebook** (Pages) | ✅ | ✅ | Image posts. Video publishing is not implemented yet. |
+| **Instagram** (Business) | ✅ | ✅ | Images and video (Reels). |
+| **LinkedIn** | ✅ | ✅ | Text posts only for now. |
+| **Pinterest** | ✅ | ✅ | Pins to a chosen board. |
+| **Google Business Profile** | ✅ | ✅ | Posts to a business location. |
+| **X (Twitter)** | ✅ | ⏳ | Connection and inbox work; scheduled publishing is not added yet. |
 
-> Platform bazlı performans panelindeki gönderi istatistikleri şu an **örnek (mock) veri** ile gösterilmektedir; gerçek API istatistikleri yol haritasındadır.
+> Post statistics on the per-platform performance panel currently use **sample (mock) data**. Real API statistics are on the roadmap.
 
-## 🏗️ Mimari
+## 🏗️ Architecture
 
-`run.py` tek bir komutla dört servisi birlikte başlatır:
+`run.py` starts four services with a single command:
 
 ```mermaid
 flowchart LR
-    U([👤 Kullanıcı]) --> D[Streamlit Arayüz<br/>dashboard.py]
+    U([👤 User]) --> D[Streamlit UI<br/>dashboard.py]
     D <--> DB[(SQLite<br/>sosyal_orkestra.db)]
-    D -- OAuth / API istekleri --> B[Flask Backend<br/>backend.py :5000]
+    D -- OAuth / API requests --> B[Flask backend<br/>backend.py :5000]
     B <--> DB
-    N[ngrok tüneli] -- herkese açık HTTPS --> B
-    S[Zamanlayıcı<br/>scheduler.py] -- her dakika --> DB
-    S -- yayınla --> P{{Sosyal Medya API'leri}}
-    B -- OAuth callback / webhook --> P
-    P -- medya URL'si ister --> N
+    N[ngrok tunnel] -- public HTTPS --> B
+    S[Scheduler<br/>scheduler.py] -- every minute --> DB
+    S -- publish --> P{{Social media APIs}}
+    B -- OAuth callbacks / webhooks --> P
+    P -- fetch media URL --> N
 ```
 
-| Bileşen | Görevi |
+| Component | Role |
 |---|---|
-| `dashboard.py` | Streamlit ile kullanıcı arayüzü: giriş, takvim, raporlar, ayarlar |
-| `backend.py` | Flask sunucusu: OAuth giriş/callback, webhook'lar, gelen kutusu, trend ve rapor uç noktaları, medya sunumu |
-| `scheduler.py` | Zamanı gelen gönderileri her dakika bulup ilgili platforma yayınlar |
-| `database.py` | SQLite şeması ve tüm veritabanı işlemleri |
-| `platforms/` | Her platform için `BasePlatform`'dan türeyen yayın sınıfları |
-| `security.py` | Fernet ile hassas verilerin şifrelenmesi |
-| `ngrok_utils.py` | Çalışan ngrok tünelinin HTTPS adresini bulur |
-| `pdf_utils.py` | Analiz verisinden PDF rapor üretir |
+| `dashboard.py` | Streamlit UI: login, calendar, reports, settings |
+| `backend.py` | Flask server: OAuth login and callbacks, webhooks, inbox, trends and report endpoints, media serving |
+| `scheduler.py` | Finds due posts every minute and publishes them to the right platform |
+| `database.py` | SQLite schema and all database access |
+| `platforms/` | One publishing class per platform, each derived from `BasePlatform` |
+| `security.py` | Fernet encryption for sensitive data |
+| `ngrok_utils.py` | Finds the HTTPS address of the running ngrok tunnel |
+| `pdf_utils.py` | Builds PDF reports from analytics data |
 
-> **Neden ngrok?** Instagram, Pinterest ve Google gibi platformlar, yayınlanacak görseli herkese açık bir URL'den kendileri indirir. ngrok, yerel Flask sunucusunu (`/uploads/...`) internete açarak bunu mümkün kılar ve OAuth callback adresi olarak da kullanılır.
+> **Why ngrok?** Instagram, Pinterest and Google download the image to publish from a public URL themselves. ngrok exposes the local Flask server (`/uploads/...`) to the internet, and doubles as the OAuth callback address.
 
-## 🚀 Kurulum
+## 🚀 Getting started
 
-### Gereksinimler
+### Requirements
 
 - Python 3.10+
-- [ngrok](https://ngrok.com/download) (kurulu ve hesabınıza bağlı: `ngrok config add-authtoken <token>`)
-- Kullanmak istediğiniz platformların geliştirici uygulamaları (Meta, LinkedIn, Pinterest, Google, X)
+- [ngrok](https://ngrok.com/download), installed and linked to your account with `ngrok config add-authtoken <token>`
+- Developer apps for the platforms you want to use (Meta, LinkedIn, Pinterest, Google, X)
 
-### 1. Projeyi indirin
+### 1. Clone
 
 ```bash
 git clone https://github.com/ahmettasdemirusa/sosyalorkestra.git
-```
-
-```bash
 cd sosyalorkestra
 ```
 
-### 2. Sanal ortam ve bağımlılıklar
+### 2. Virtual environment and dependencies
 
 ```bash
 python -m venv venv
-```
-
-Windows için:
-
-```bash
-venv\Scripts\activate
-```
-
-macOS / Linux için:
-
-```bash
-source venv/bin/activate
-```
-
-```bash
+source venv/bin/activate      # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 3. `.env` dosyasını oluşturun
+### 3. Create a `.env` file
 
-Proje kök dizinine bir `.env` dosyası ekleyin. Yalnızca kullanacağınız platformların anahtarlarını doldurmanız yeterlidir.
+Add a `.env` file to the project root. You only need keys for the platforms you use.
 
 ```env
-# --- Genel ---
-FLASK_SECRET_KEY=uzun-ve-rastgele-bir-deger
-ENCRYPTION_KEY=                      # Boş bırakılırsa ilk çalıştırmada üretilir, çıktıdaki değeri buraya yapıştırın
-BACKEND_URL=https://xxxx.ngrok-free.app   # run.py bunu otomatik doldurur; ngrok çalışmazsa yedek olarak kullanılır
+# --- General ---
+FLASK_SECRET_KEY=a-long-random-value
+ENCRYPTION_KEY=                      # Generated on first run if empty; paste the printed value here
+BACKEND_URL=https://xxxx.ngrok-free.app   # run.py fills this in; used as a fallback if ngrok is not running
 
 # --- Meta (Facebook + Instagram) ---
 FACEBOOK_APP_ID=
@@ -152,140 +139,136 @@ LINKEDIN_CLIENT_SECRET=
 PINTEREST_APP_ID=
 PINTEREST_APP_SECRET=
 
-# --- Google (My Business) ---
+# --- Google (Business Profile) ---
 GOOGLE_CLIENT_ID=
 GOOGLE_CLIENT_SECRET=
 GOOGLE_DEVELOPER_TOKEN=
 
-# --- Yapay Zekâ ve Görseller ---
+# --- AI and images ---
 OPENAI_API_KEY=
 UNSPLASH_ACCESS_KEY=
 ```
 
-> ⚠️ `.env` dosyası `.gitignore` içindedir. Anahtarlarınızı asla depoya göndermeyin.
+> ⚠️ `.env` is in `.gitignore`. Never commit your keys.
 
-### 4. Platform uygulamalarında callback adreslerini tanımlayın
+### 4. Register callback URLs in each platform app
 
-Her geliştirici uygulamasının "Redirect / Callback URL" alanına ngrok adresinizi ekleyin:
+Add your ngrok address to each developer app's redirect/callback URL field:
 
 | Platform | Callback URL |
 |---|---|
-| Facebook | `https://<ngrok-adresiniz>/callback/facebook` |
-| Instagram | `https://<ngrok-adresiniz>/callback/instagram` |
-| X (Twitter) | `https://<ngrok-adresiniz>/callback/x` |
-| LinkedIn | `https://<ngrok-adresiniz>/callback/linkedin` |
-| Pinterest | `https://<ngrok-adresiniz>/callback/pinterest` |
-| Google My Business | `https://<ngrok-adresiniz>/callback/google_my_business` |
+| Facebook | `https://<your-ngrok-host>/callback/facebook` |
+| Instagram | `https://<your-ngrok-host>/callback/instagram` |
+| X (Twitter) | `https://<your-ngrok-host>/callback/x` |
+| LinkedIn | `https://<your-ngrok-host>/callback/linkedin` |
+| Pinterest | `https://<your-ngrok-host>/callback/pinterest` |
+| Google Business Profile | `https://<your-ngrok-host>/callback/google_my_business` |
 
-Meta uygulaması için ayrıca:
+For the Meta app, also set:
 
-- **Webhook:** `https://<ngrok-adresiniz>/webhook/facebook`
-- **Veri silme isteği:** `https://<ngrok-adresiniz>/facebook/data-deletion`
-- **Gizlilik politikası:** `https://<ngrok-adresiniz>/privacy-policy`
-- **Kullanım koşulları:** `https://<ngrok-adresiniz>/terms-of-service`
+- **Webhook:** `https://<your-ngrok-host>/webhook/facebook`
+- **Data deletion request:** `https://<your-ngrok-host>/facebook/data-deletion`
+- **Privacy policy:** `https://<your-ngrok-host>/privacy-policy`
+- **Terms of service:** `https://<your-ngrok-host>/terms-of-service`
 
-> 💡 Ücretsiz ngrok planında adres her başlatmada değişir. Callback adreslerini her seferinde güncellememek için ngrok'tan sabit (static) bir alan adı almanız önerilir.
+> 💡 On ngrok's free plan the address changes on every start. A static ngrok domain saves you from updating the callbacks each time.
 
-### 5. Çalıştırın
+### 5. Run
 
 ```bash
 python run.py
 ```
 
-Bu komut sırasıyla **ngrok → Flask backend → zamanlayıcı → Streamlit arayüz** servislerini başlatır. Arayüz varsayılan olarak `http://localhost:8501` adresinde açılır. Tüm servisleri durdurmak için terminalde `Ctrl + C` yeterlidir.
+This starts **ngrok → Flask backend → scheduler → Streamlit UI**, in that order. The dashboard opens at `http://localhost:8501`. Press `Ctrl + C` in the terminal to stop every service.
 
-İlk açılışta bir kullanıcı hesabı oluşturun, ardından **Ayarlar → Marka Yönetimi** bölümünden ilk markanızı ekleyin ve **Platform Yönetimi** üzerinden hesaplarınızı bağlayın.
+On first launch, create a user account. Then add your first brand under **Settings → Brand Management** and connect your accounts from **Platform Management**.
 
 <details>
-<summary><b>Servisleri ayrı ayrı çalıştırmak (geliştirme için)</b></summary>
+<summary><b>Running the services separately (for development)</b></summary>
 
-Her komutu ayrı bir terminalde çalıştırın:
+Run each command in its own terminal:
 
 ```bash
 ngrok http 5000
-```
-
-```bash
 python backend.py
-```
-
-```bash
 python scheduler.py
-```
-
-```bash
 streamlit run dashboard.py
 ```
 
 </details>
 
-## 📤 Toplu Yükleme Formatı
+## 📤 Bulk upload format
 
-**Toplu Yükleme** sayfasından şablonu indirip doldurun. Her satır bir gönderidir:
+Download the template from the **Bulk Upload** page and fill it in. Each row is one post:
 
 ```csv
 platform_name,account_name,caption,media_path,scheduled_datetime,bucket_name
-Instagram,Hesap Adiniz,"Bu bir örnek gönderidir. #topluyukleme","uploads/ornek.jpg","2024-12-25 10:30:00",Tanıtım
-Facebook,Sayfa Adiniz,"Bu başka bir gönderi.","uploads/baska_bir_gorsel.png","2024-12-26 18:00:00",
+Instagram,Your Account,"This is a sample post. #bulkupload","uploads/sample.jpg","2024-12-25 10:30:00",Promotion
+Facebook,Your Page,"Another post.","uploads/another_image.png","2024-12-26 18:00:00",
 ```
 
-Medya dosyaları önceden projenin `uploads/` klasöründe bulunmalıdır.
+Media files must already be in the project's `uploads/` folder.
 
-## 📁 Proje Yapısı
+## 📁 Project structure
 
 ```
 sosyalorkestra/
-├── run.py                  # Tüm servisleri tek komutla başlatır
-├── dashboard.py            # Streamlit arayüzü
-├── backend.py              # Flask API, OAuth ve webhook'lar
-├── scheduler.py            # Zamanlanmış gönderi yayıncısı
-├── database.py             # SQLite şeması ve sorgular
-├── security.py             # Fernet şifreleme yardımcıları
-├── ngrok_utils.py          # ngrok adresini bulma
-├── pdf_utils.py            # PDF rapor üretimi
+├── run.py                  # Starts every service with one command
+├── dashboard.py            # Streamlit UI
+├── backend.py              # Flask API, OAuth and webhooks
+├── scheduler.py            # Scheduled post publisher
+├── database.py             # SQLite schema and queries
+├── security.py             # Fernet encryption helpers
+├── ngrok_utils.py          # Finds the ngrok address
+├── pdf_utils.py            # PDF report generation
 ├── requirements.txt
 ├── platforms/
-│   ├── base_platform.py    # Tüm platformların temel sınıfı
+│   ├── base_platform.py    # Base class for every platform
 │   ├── facebook_platform.py
 │   ├── instagram_platform.py
 │   ├── linkedin_platform.py
 │   ├── pinterest_platform.py
 │   ├── google_my_business_platform.py
-│   └── google_platform.py  # Google Ads / Analytics (taslak)
-└── uploads/                # Yüklenen medya (git'e dahil değil)
+│   └── google_platform.py  # Google Ads / Analytics (draft)
+└── uploads/                # Uploaded media (not tracked by git)
 ```
 
-### Yeni bir platform eklemek
+### Adding a new platform
 
-1. `platforms/` altında `BasePlatform`'dan türeyen bir sınıf oluşturup `post()` metodunu uygulayın.
-2. `backend.py` içinde `/login/<platform>` ve `/callback/<platform>` akışını ekleyin.
-3. `scheduler.py` içindeki `check_and_post_due_posts()` fonksiyonuna platformun dalını ekleyin.
+1. Create a class in `platforms/` that inherits from `BasePlatform` and implements `post()`.
+2. Add the `/login/<platform>` and `/callback/<platform>` flow in `backend.py`.
+3. Add the platform's branch to `check_and_post_due_posts()` in `scheduler.py`.
 
-## 🗺️ Yol Haritası
+## 🗺️ Roadmap
 
-- [ ] X (Twitter) için zamanlanmış yayın
-- [ ] Facebook video yayını
-- [ ] LinkedIn görselli gönderi
-- [ ] Örnek veriler yerine gerçek platform istatistikleri
-- [ ] Google Ads ve Google Analytics entegrasyonu (`google_platform.py`)
-- [ ] Süresi dolan token'ların otomatik yenilenmesi
-- [ ] Hatalı gönderiler için yeniden deneme
+- [ ] English interface (i18n)
+- [ ] Scheduled publishing for X (Twitter)
+- [ ] Facebook video publishing
+- [ ] LinkedIn image posts
+- [ ] Real platform statistics instead of sample data
+- [ ] Google Ads and Google Analytics integration (`google_platform.py`)
+- [ ] Automatic renewal of expiring tokens
+- [ ] Retry for failed posts
 
-## 🔐 Güvenlik Notları
+Contributions are welcome, especially translations and new platform integrations.
 
-- Kullanıcı şifreleri Werkzeug ile hash'lenir; düz metin saklanmaz.
-- İki aşamalı doğrulama (Google Authenticator vb.) **Ayarlar** sayfasından açılabilir.
-- `FLASK_SECRET_KEY` tanımlanmazsa güvensiz bir varsayılan kullanılır — canlı ortamda mutlaka ayarlayın.
-- `backend.py` geliştirme modunda (`debug=True`) çalışır; canlı ortamda `gunicorn` gibi bir WSGI sunucusu kullanın.
+## 🔐 Security notes
 
-## 📄 Lisans
+- User passwords are hashed with Werkzeug and never stored as plain text.
+- Two-factor authentication (Google Authenticator etc.) can be turned on from **Settings**.
+- If `FLASK_SECRET_KEY` is not set, an insecure default is used. Always set it in production.
+- `backend.py` runs in development mode (`debug=True`). Use a WSGI server such as `gunicorn` in production.
 
-Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır. Kodu özgürce kullanabilir, değiştirebilir ve dağıtabilirsiniz; tek şart lisans ve telif bildiriminin korunmasıdır.
+## 📄 License
+
+[MIT](LICENSE). You are free to use, change and distribute the code; just keep the license and copyright notice.
 
 ---
 
 <div align="center">
 
-Geliştiren: **[Ahmet Taşdemir](https://github.com/ahmettasdemirusa)**
+If this project is useful to you, a ⭐ helps other people find it.
+
+Built by **[Ahmet Tasdemir](https://github.com/ahmettasdemirusa)** · [ahmettasdemir.com](https://ahmettasdemir.com)
 
 </div>
